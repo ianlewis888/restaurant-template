@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Lato');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+$heading-fonts: Roboto, "Open Sans", sans-serif;
+$body-fonts: Lato, "Open Sans", sans-serif;
+
+$color1: #fff;
+$color2: #fce38a;
+$color3: #02c39a;
+$color4: #028090;
+$color5: #003459;
+
+* { margin: 0; padding: 0; border: none; }
+
+body {
+  font-family: $body-fonts;
+  background-color: $color1;
+  color: $color5;
+}
+
+h1, h2 { font-family: $heading-fonts; }
+h1 { font-size: 4em; }
+h2 { font-size: 2em; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 300ms ease, background-color 300ms ease;
+  &:hover {
+    color: $color1;
+    background-color: lighten($color5, 10%);
+  }
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 100px;
+  padding: 10px;
+  margin: 0px 10px 0px 10px;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: capitalize;
+  &:active {
+    background-color: darken($color1, 10%);
+  }
+}
+
+blockquote {
+  border-left: solid 10px $color3;
+  color: $color1;
+  background-color: $color4;
+  padding: 40px;
+  font-style: italic;
+  box-shadow: 2px 2px 15px #ccc;
+  &::before {
+    position: absolute;
+    left: 15px;
+    transform: translateY(-78px);
+    text-shadow: 4px 2px $color4;
+    content: '“';
+    font-style: normal;
+    font-size: 6em;
+  } &::after {
+    position: absolute;
+    right: 15px;
+    text-shadow: 4px 2px $color4;
+    content: '”';
+    font-style: normal;
+    font-size: 6em;
+  } cite {
+    display: block;
+    margin-top: 20px;
+    font-style: normal;
+    &::before {
+      content: "— ";
+    }
+  }}
+
+.section {
+  margin-bottom: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+  display: block;
+  font-size: 1.2em;
+  p { margin-top: 30px; }
+  ul {
+    margin: 5px; margin-left: 20px;
+    li:nth-child(1) {
+      margin-top: 20px;
+    }
+    li:last-child {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.section-1 {
+  h2 { color: $color5; }
+  p { color: $color5; }
+}
+
+.section-2 {
+  padding: 0px;
+  padding-top: 40px;
+  text-align: center;
+  background-color: $color2;
+  color: $color5;
+  p { padding-left: 40px; padding-right: 40px;}
+  blockquote { text-align: left;
+    margin-top: 40px; }
+}
+
+.sign-up {
+  background-color: $color2;
+  color: $color1;
+  &:active {
+    background-color: darken($color2, 10%);
+  }
+}
+
+@import 'hero';
+@import 'nav';
+@import 'reviews';
+@import 'menu-snippet';
+@import 'embed-map';

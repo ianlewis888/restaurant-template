@@ -1,0 +1,25 @@
+.hero {
+  padding: 50px;
+  max-width: 100%;
+  text-align: center;
+  color: $color5;
+  background-repeat: repeat;
+  background-color: $color1;
+}
+.logo {
+  max-width: 500px;
+}
+.logo-subtitle {
+  font-size: 1.3em;
+  cursor: default;
+}
+.hero-images {
+  margin-top: 0px;
+  margin-bottom: -5px;
+  img {
+    margin-bottom: 0px;
+    object-fit: cover;
+    width: 33.333%;
+    height: 280px;
+  }
+}

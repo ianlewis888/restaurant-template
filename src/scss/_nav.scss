@@ -1,0 +1,39 @@
+.nav {
+  position: sticky;
+  top: -1px;
+  z-index: 50;
+  background-color: $color5;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 20px;
+  text-align: center;
+  a {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: $color1;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 20px;
+    transition: background-color 300ms ease;
+  }
+  a:hover {
+    background-color: lighten($color5, 10%);
+  }
+}
+@media only screen and (max-width : 800px) {
+  .nav {
+    position: relative;
+    padding: 0px;
+  }
+  .nav a {
+    display: block;
+    padding: 15px;
+    border-bottom: solid 2px lighten($color5, 10%);
+  }
+  .nav a:last-child {
+    border-bottom: none;
+  }
+}
