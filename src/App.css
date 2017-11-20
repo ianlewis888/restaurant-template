@@ -43,24 +43,27 @@ button {
     background-color: #e6e6e6; }
 
 blockquote {
-  border-left: solid 10px #02c39a;
+  margin-top: 50px;
+  border-left: solid 10px #028090;
   color: #fff;
-  background-color: #028090;
+  background-color: #003459;
   padding: 40px;
-  font-style: italic;
-  box-shadow: 2px 2px 15px #ccc; }
+  font-style: italic; }
   blockquote::before {
     position: absolute;
     left: 15px;
-    transform: translateY(-78px);
-    text-shadow: 4px 2px #028090;
+    transform: translateY(-69px);
+    text-shadow: 4px 0px #003459;
     content: '“';
     font-style: normal;
-    font-size: 6em; }
+    font-size: 6em;
+    font-family: "Arial"; }
   blockquote::after {
     position: absolute;
+    margin-top: 7px;
     right: 15px;
-    text-shadow: 4px 2px #028090;
+    text-shadow: 4px 0px #003459;
+    font-family: "Arial";
     content: '”';
     font-style: normal;
     font-size: 6em; }
@@ -138,16 +141,16 @@ blockquote {
 
 .nav {
   position: sticky;
-  top: -1px;
+  top: 0px;
   z-index: 50;
   background-color: #003459;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding: 20px;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center; }
   .nav a {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: 0px;
     margin-left: 20px;
     margin-right: 20px;
     color: #fff;
@@ -159,7 +162,12 @@ blockquote {
   .nav a:hover {
     background-color: #00528c; }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1100px) {
+  .nav a {
+    font-size: 1em;
+    padding-left: 10px;
+    padding-right: 10px; } }
+@media only screen and (max-width: 900px) {
   .nav {
     position: relative;
     padding: 0px; }
@@ -196,13 +204,20 @@ blockquote {
     display: inline-block;
     text-align: left;
     vertical-align: top; }
+    .menu-snippet .menu-snippet-content > div > .dish-name {
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 1.3em; }
     .menu-snippet .menu-snippet-content > div > h2 {
       margin-bottom: 20px;
       color: #02c39a; }
     .menu-snippet .menu-snippet-content > div > a {
+      color: #00528c;
       font-size: 1.3em;
       display: inline-block;
       margin-top: 20px; }
+      .menu-snippet .menu-snippet-content > div > a:hover {
+        color: #fff; }
 
 .embed-map {
   text-align: center;
@@ -211,5 +226,44 @@ blockquote {
     width: 90%;
     height: 400px;
     max-width: 800px; }
+
+.menu {
+  padding: 20px;
+  text-align: center; }
+  .menu .menu-links {
+    margin-bottom: 20px; }
+    .menu .menu-links a {
+      display: inline-block;
+      margin: 0px;
+      margin-left: 10px;
+      margin-right: 10px; }
+
+.restaurant-location {
+  text-align: center;
+  margin-bottom: 50px; }
+  .restaurant-location p {
+    margin-top: 20px; }
+  .restaurant-location .directions {
+    display: inline-block;
+    padding: 20px;
+    padding-bottom: 30px;
+    margin: 5%;
+    margin-top: 30px;
+    vertical-align: top;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); }
+    .restaurant-location .directions h2 {
+      display: inline-block;
+      border-bottom: solid 2px #02c39a; }
+    .restaurant-location .directions .dir-element {
+      display: block;
+      font-size: 1.2em; }
+      .restaurant-location .directions .dir-element .transit-icon {
+        margin-left: 1px;
+        margin-right: 1px;
+        transform: translateY(8px);
+        width: 30px;
+        height: auto; }
 
 /*# sourceMappingURL=App.css.map */

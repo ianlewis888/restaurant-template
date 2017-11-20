@@ -6,9 +6,9 @@ export default class EmbedMap extends Component {
     const key = 'AIzaSyAPo4vS07AsJiqUz-LIbYS8tTA6fSObvM8';
     return (
       <div className="embed-map">
-        <iframe src={"//www.google.com/maps/embed/v1/place"
-        + "?q=place_id:ChIJw5QQyflbwokRPGpaJDXQHqs"
-        + "&zoom=17"
+        <iframe src={"https://www.google.com/maps/embed/v1/place"
+        + "?q=179 Elizabeth St, New York, NY 10012"
+        + "&zoom=16"
         + "&key=" + key}>
         </iframe>
       </div>

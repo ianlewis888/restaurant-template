@@ -50,24 +50,27 @@ button {
 }
 
 blockquote {
-  border-left: solid 10px $color3;
+  margin-top: 50px;
+  border-left: solid 10px $color4;
   color: $color1;
-  background-color: $color4;
+  background-color: $color5;
   padding: 40px;
   font-style: italic;
-  box-shadow: 2px 2px 15px #ccc;
   &::before {
     position: absolute;
     left: 15px;
-    transform: translateY(-78px);
-    text-shadow: 4px 2px $color4;
+    transform: translateY(-69px);
+    text-shadow: 4px 0px $color5;
     content: '“';
     font-style: normal;
     font-size: 6em;
+    font-family: "Arial";
   } &::after {
     position: absolute;
+    margin-top: 7px;
     right: 15px;
-    text-shadow: 4px 2px $color4;
+    text-shadow: 4px 0px $color5;
+    font-family: "Arial";
     content: '”';
     font-style: normal;
     font-size: 6em;
@@ -128,3 +131,5 @@ blockquote {
 @import 'reviews';
 @import 'menu-snippet';
 @import 'embed-map';
+@import 'menu';
+@import 'restaurant-location';
