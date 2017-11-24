@@ -28,52 +28,6 @@ a {
     color: #fff;
     background-color: #00528c; }
 
-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  width: 100px;
-  padding: 10px;
-  margin: 0px 10px 0px 10px;
-  font-size: 1em;
-  font-weight: 600;
-  text-transform: capitalize; }
-  button:active {
-    background-color: #e6e6e6; }
-
-blockquote {
-  margin-top: 50px;
-  border-left: solid 10px #028090;
-  color: #fff;
-  background-color: #003459;
-  padding: 40px;
-  font-style: italic; }
-  blockquote::before {
-    position: absolute;
-    left: 15px;
-    transform: translateY(-69px);
-    text-shadow: 4px 0px #003459;
-    content: '“';
-    font-style: normal;
-    font-size: 6em;
-    font-family: "Arial"; }
-  blockquote::after {
-    position: absolute;
-    margin-top: 7px;
-    right: 15px;
-    text-shadow: 4px 0px #003459;
-    font-family: "Arial";
-    content: '”';
-    font-style: normal;
-    font-size: 6em; }
-  blockquote cite {
-    display: block;
-    margin-top: 20px;
-    font-style: normal; }
-    blockquote cite::before {
-      content: "— "; }
-
 .section {
   margin-bottom: 40px;
   padding-left: 50px;
@@ -155,7 +109,7 @@ blockquote {
     margin-right: 20px;
     color: #fff;
     font-size: 1.2em;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-decoration: none;
     padding: 20px;
     transition: background-color 300ms ease; }
@@ -179,6 +133,53 @@ blockquote {
 
   .nav a:last-child {
     border-bottom: none; } }
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 100px;
+  padding: 10px;
+  margin: 0px 10px 0px 10px;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: capitalize; }
+  button:active {
+    background-color: #e6e6e6; }
+
+blockquote {
+  font-size: 1.2em;
+  margin-top: 50px;
+  border-left: solid 10px #028090;
+  color: #fff;
+  background-color: #003459;
+  padding: 40px;
+  font-style: italic; }
+  blockquote::before {
+    position: absolute;
+    left: 15px;
+    transform: translateY(-73px);
+    text-shadow: 4px 0px #003459;
+    content: '“';
+    font-style: normal;
+    font-size: 6em;
+    font-family: "Arial"; }
+  blockquote::after {
+    position: absolute;
+    margin-top: 0px;
+    right: 15px;
+    text-shadow: 4px 0px #003459;
+    font-family: "Arial";
+    content: '”';
+    font-style: normal;
+    font-size: 6em; }
+  blockquote cite {
+    display: block;
+    margin-top: 20px;
+    font-style: normal; }
+    blockquote cite::before {
+      content: "— "; }
+
 .reviews {
   color: #666666;
   text-align: center;
@@ -190,6 +191,15 @@ blockquote {
     .reviews .star-rating span {
       margin-left: 1px;
       margin-right: 1px; }
+  .reviews .yelp-link {
+    display: inline-block;
+    border-radius: 3px;
+    padding: 10px;
+    margin-top: 25px;
+    background-color: #02c39a;
+    color: #fff; }
+    .reviews .yelp-link:hover {
+      background-color: #028090; }
 
 .menu-snippet {
   margin-top: 50px;
@@ -220,9 +230,13 @@ blockquote {
         color: #fff; }
 
 .embed-map {
-  text-align: center;
   margin-top: 50px; }
-  .embed-map > iframe {
+  .embed-map iframe {
+    width: 90%;
+    height: 400px;
+    max-width: 800px; }
+  .embed-map #g_map {
+    text-align: center;
     width: 90%;
     height: 400px;
     max-width: 800px; }
@@ -239,15 +253,15 @@ blockquote {
       margin-right: 10px; }
 
 .restaurant-location {
-  text-align: center;
-  margin-bottom: 50px; }
+  text-align: center; }
   .restaurant-location p {
     margin-top: 20px; }
   .restaurant-location .directions {
     display: inline-block;
     padding: 20px;
     padding-bottom: 30px;
-    margin: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 30px;
     vertical-align: top;
     width: 80%;
@@ -266,4 +280,58 @@ blockquote {
         width: 30px;
         height: auto; }
 
-/*# sourceMappingURL=App.css.map */
+.contact {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 50px; }
+  .contact .contact-section:first-child {
+    margin-top: 0px; }
+  .contact .contact-section {
+    margin-top: 15px; }
+    .contact .contact-section a {
+      display: inline-block;
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 3px;
+      color: #fff;
+      background-color: #02c39a; }
+      .contact .contact-section a:hover {
+        background-color: #028090; }
+    .contact .contact-section textarea {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 3px;
+      font-family: inherit;
+      font-size: .8em;
+      border: solid 1px #003459;
+      width: 90%;
+      max-width: 600px; }
+    .contact .contact-section button[type="submit"] {
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      letter-spacing: inherit;
+      display: inline-block;
+      border: none;
+      outline: none;
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 3px;
+      margin-top: 15px;
+      color: #fff;
+      background-color: #02c39a;
+      transition: background-color 300ms ease; }
+      .contact .contact-section button[type="submit"]:hover {
+        background-color: #028090; }
+
+.footer {
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #003459;
+  color: #fff; }
+
+/*# sourceMappingURL=app.css.map */

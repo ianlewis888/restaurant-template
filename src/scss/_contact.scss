@@ -1,0 +1,47 @@
+.contact {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 50px;
+  .contact-section:first-child { margin-top: 0px; }
+  .contact-section {
+    margin-top: 15px;
+    a {
+      display: inline-block;
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 3px;
+      color: $color1;
+      background-color: $color3;
+      &:hover { background-color: $color4; }
+    }
+    textarea {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 3px;
+      font-family: inherit;
+      font-size: .8em;
+      border: solid 1px $color5;
+      width: 90%;
+      max-width: 600px;
+    }
+    button[type="submit"] {
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      letter-spacing: inherit;
+      display: inline-block;
+      border: none;
+      outline: none;
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 3px;
+      margin-top: 15px;
+      color: $color1;
+      background-color: $color3;
+      transition: background-color 300ms ease;
+      &:hover { background-color: $color4; }
+    }
+  }
+}

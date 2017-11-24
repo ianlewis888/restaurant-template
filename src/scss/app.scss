@@ -33,56 +33,6 @@ a {
   }
 }
 
-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  width: 100px;
-  padding: 10px;
-  margin: 0px 10px 0px 10px;
-  font-size: 1em;
-  font-weight: 600;
-  text-transform: capitalize;
-  &:active {
-    background-color: darken($color1, 10%);
-  }
-}
-
-blockquote {
-  margin-top: 50px;
-  border-left: solid 10px $color4;
-  color: $color1;
-  background-color: $color5;
-  padding: 40px;
-  font-style: italic;
-  &::before {
-    position: absolute;
-    left: 15px;
-    transform: translateY(-69px);
-    text-shadow: 4px 0px $color5;
-    content: '“';
-    font-style: normal;
-    font-size: 6em;
-    font-family: "Arial";
-  } &::after {
-    position: absolute;
-    margin-top: 7px;
-    right: 15px;
-    text-shadow: 4px 0px $color5;
-    font-family: "Arial";
-    content: '”';
-    font-style: normal;
-    font-size: 6em;
-  } cite {
-    display: block;
-    margin-top: 20px;
-    font-style: normal;
-    &::before {
-      content: "— ";
-    }
-  }}
-
 .section {
   margin-bottom: 40px;
   padding-left: 50px;
@@ -128,8 +78,11 @@ blockquote {
 
 @import 'hero';
 @import 'nav';
+@import 'blockquote';
 @import 'reviews';
 @import 'menu-snippet';
 @import 'embed-map';
 @import 'menu';
 @import 'restaurant-location';
+@import 'contact';
+@import 'footer';

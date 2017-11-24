@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import Main from './components/main';
+import Footer from './components/footer';
 import * as logo from './images/logo.svg';
 import './App.css';
 
@@ -26,6 +27,7 @@ class App extends Component {
           <Link to="/contact">Contact</Link>
         </div>
         <Main />
+        <Footer />
       </div>
     );
   }

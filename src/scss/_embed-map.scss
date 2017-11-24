@@ -1,7 +1,12 @@
 .embed-map {
-  text-align: center;
   margin-top: 50px;
-  > iframe {
+  iframe {
+    width: 90%;
+    height: 400px;
+    max-width: 800px;
+  }
+  #g_map {
+    text-align: center;
     width: 90%;
     height: 400px;
     max-width: 800px;

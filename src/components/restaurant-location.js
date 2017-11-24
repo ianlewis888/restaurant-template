@@ -9,7 +9,7 @@ export default class RestaurantLocation extends Component {
         <EmbedMap />
         <p>- Located at 179 Elizabeth Street, New York, NY 10012 -</p>
         <div className="directions">
-          <h2>Directions</h2>
+          <h2>Transit</h2>
           <p className="dir-element"><img className="transit-icon" src={TransitIcons.Six} />&ensp;Spring Street</p>
           <p className="dir-element"><img className="transit-icon" src={TransitIcons.F} />&ensp;2nd Avenue</p>
           <p className="dir-element"><img className="transit-icon" src={TransitIcons.B} /><img className="transit-icon" src={TransitIcons.D} />&ensp;Grand Street</p>

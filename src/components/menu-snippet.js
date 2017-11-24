@@ -20,8 +20,8 @@ export default class MenuSnippet extends Component {
       },
       "dinner": {
         "menu": "dinner",
-        "name": "rustic balsamic reduction hangar steak",
-        "description": "paired with a crispy truffle baked potato, wild mushrooms, and sauce.",
+        "name": "hangar steak with rustic balsamic reduction",
+        "description": "paired with a crispy truffle baked potato, wild mushrooms, and smashed avocado.",
         "image": "https://images.pexels.com/photos/299351/pexels-photo-299351.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb"
       }
     };
