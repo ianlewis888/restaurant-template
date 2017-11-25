@@ -12,6 +12,7 @@ export default class RestaurantLocation extends Component {
           <h2>Transit</h2>
           <p className="dir-element"><img className="transit-icon" src={TransitIcons.Six} />&ensp;Spring Street</p>
           <p className="dir-element"><img className="transit-icon" src={TransitIcons.F} />&ensp;2nd Avenue</p>
+          <p className="dir-element"><img className="transit-icon" src={TransitIcons.J} />&ensp;Bowery</p>
           <p className="dir-element"><img className="transit-icon" src={TransitIcons.B} /><img className="transit-icon" src={TransitIcons.D} />&ensp;Grand Street</p>
         </div>
       </div>

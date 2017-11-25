@@ -230,13 +230,14 @@ blockquote {
         color: #fff; }
 
 .embed-map {
-  margin-top: 50px; }
+  margin-top: 50px;
+  text-align: center; }
   .embed-map iframe {
     width: 90%;
     height: 400px;
     max-width: 800px; }
   .embed-map #g_map {
-    text-align: center;
+    display: inline-block;
     width: 90%;
     height: 400px;
     max-width: 800px; }
@@ -248,9 +249,13 @@ blockquote {
     margin-bottom: 20px; }
     .menu .menu-links a {
       display: inline-block;
-      margin: 0px;
-      margin-left: 10px;
-      margin-right: 10px; }
+      margin: 0 10px; }
+      .menu .menu-links a:hover {
+        background-color: inherit;
+        color: inherit;
+        border-bottom: 2px solid #02c39a; }
+  .menu .menu-active {
+    border-bottom: 2px solid #02c39a; }
 
 .restaurant-location {
   text-align: center; }
