@@ -1,17 +1,8 @@
 import React, { Component } from 'react';
+import Brunch from './brunch'
 import { Link } from 'react-router-dom';
 
-export class Brunch extends Component {
-  render() {
-    return (
-      <div className="menu-links">
-        <Link className="menu-active" to='/menu/brunch'><h2>Brunch</h2></Link>
-        <Link to='/menu/lunch'><h2>Lunch</h2></Link>
-        <Link to='/menu/dinner'><h2>Dinner</h2></Link>
-      </div>
-    );
-  }
-}
+
 
 export class Lunch extends Component {
   render() {

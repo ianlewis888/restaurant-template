@@ -1,0 +1,23 @@
+.social-links {
+  text-align: center;
+  margin-top: 50px;
+  .social-label { display: block; margin-top: 15px; }
+  a {
+    display: inline;
+    font-size: 2.5em;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .facebook-link, .twitter-link, .instagram-link {
+    transition: color 300ms ease;
+  }
+  .facebook-link:hover {
+    background-color: inherit;
+    color: #405A93; }
+  .twitter-link:hover {
+    background-color: inherit;
+    color: #49A0EC; }
+  .instagram-link:hover {
+    background-color: inherit;
+    color: #B23770; }
+}

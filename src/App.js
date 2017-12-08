@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import Main from './components/main';
 import Footer from './components/footer';
 import * as logo from './images/logo.svg';
+import * as headerImg1 from './images/header-images/header-img-1.jpg';
+import * as headerImg2 from './images/header-images/header-img-2.jpeg';
+import * as headerImg3 from './images/header-images/header-img-3.jpeg';
 import './App.css';
 
 class App extends Component {
@@ -10,13 +13,13 @@ class App extends Component {
     return (
       <div className="App">
         <div className="hero">
-          <img src={logo} className="logo" />
+          <img src={logo} className="logo" alt="logo" />
           <div className="logo-subtitle">bar • restaurant</div>
         </div>
         <div className="hero-images">
-          <img src="https://static.pexels.com/photos/5938/food-salad-healthy-lunch.jpg" />
-          <img src="https://static.pexels.com/photos/616836/pexels-photo-616836.jpeg" />
-          <img src="https://static.pexels.com/photos/262918/pexels-photo-262918.jpeg" />
+          <img src={headerImg1} alt="Header Background 1" />
+          <img src={headerImg2} alt="Header Background 2" />
+          <img src={headerImg3} alt="Header Background 3" />
         </div>
         <div className="nav">
           <Link to="/">Home</Link>

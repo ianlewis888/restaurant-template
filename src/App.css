@@ -6,6 +6,9 @@
   padding: 0;
   border: none; }
 
+*::selection {
+  background: #fce38a; }
+
 body {
   font-family: Lato, "Open Sans", sans-serif;
   background-color: #fff;
@@ -331,6 +334,29 @@ blockquote {
       .contact .contact-section button[type="submit"]:hover {
         background-color: #028090; }
 
+.social-links {
+  text-align: center;
+  margin-top: 50px; }
+  .social-links .social-label {
+    display: block;
+    margin-top: 15px; }
+  .social-links a {
+    display: inline;
+    font-size: 2.5em;
+    margin-left: 20px;
+    margin-right: 20px; }
+  .social-links .facebook-link, .social-links .twitter-link, .social-links .instagram-link {
+    transition: color 300ms ease; }
+  .social-links .facebook-link:hover {
+    background-color: inherit;
+    color: #405A93; }
+  .social-links .twitter-link:hover {
+    background-color: inherit;
+    color: #49A0EC; }
+  .social-links .instagram-link:hover {
+    background-color: inherit;
+    color: #B23770; }
+
 .footer {
   display: block;
   text-align: center;
@@ -339,4 +365,4 @@ blockquote {
   background-color: #003459;
   color: #fff; }
 
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=App.css.map */

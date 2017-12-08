@@ -12,6 +12,9 @@ $color4: #028090;
 $color5: #003459;
 
 * { margin: 0; padding: 0; border: none; }
+*::selection {
+  background: $color2;
+}
 
 body {
   font-family: $body-fonts;
@@ -85,4 +88,5 @@ a {
 @import 'menu';
 @import 'restaurant-location';
 @import 'contact';
+@import 'social-links';
 @import 'footer';

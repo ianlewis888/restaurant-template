@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { GetMenu, menus } from './menus';
+import { GetMenu, menus } from './menus/menus';
 import getMenuByTOD from '../functions/get-menu-by-tod';
 
 export default class Menu extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className="menu">

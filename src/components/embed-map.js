@@ -3,9 +3,6 @@ import React, {Component} from 'react';
 import loadJS from 'loadjs';
 
 export default class EmbedMap extends Component {
-  constructor(props) {
-    super(props);
-  }
   loadJS(src) {
     var ref = window.document.getElementsByTagName("script")[0];
     var script = window.document.createElement("script");
@@ -14,7 +11,6 @@ export default class EmbedMap extends Component {
     ref.parentNode.insertBefore(script, ref);
   }
   initMap() {
-    const address = "79 Elizabeth St, New York, NY 10012";
     const location = {
       lat: 40.721334, lng: -73.994700
     };
