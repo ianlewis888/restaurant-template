@@ -6,6 +6,9 @@
   padding: 0;
   border: none; }
 
+*::-moz-selection {
+  background: #fce38a; }
+
 *::selection {
   background: #fce38a; }
 
@@ -26,6 +29,7 @@ h2 {
 a {
   text-decoration: none;
   color: inherit;
+  -webkit-transition: color 300ms ease, background-color 300ms ease;
   transition: color 300ms ease, background-color 300ms ease; }
   a:hover {
     color: #fff;
@@ -92,11 +96,13 @@ a {
   margin-bottom: -5px; }
   .hero-images img {
     margin-bottom: 0px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 33.333%;
     height: 280px; }
 
 .nav {
+  position: -webkit-sticky;
   position: sticky;
   top: 0px;
   z-index: 50;
@@ -115,6 +121,7 @@ a {
     letter-spacing: 1px;
     text-decoration: none;
     padding: 20px;
+    -webkit-transition: background-color 300ms ease;
     transition: background-color 300ms ease; }
   .nav a:hover {
     background-color: #00528c; }
@@ -161,7 +168,8 @@ blockquote {
   blockquote::before {
     position: absolute;
     left: 15px;
-    transform: translateY(-73px);
+    -webkit-transform: translateY(-73px);
+            transform: translateY(-73px);
     text-shadow: 4px 0px #003459;
     content: '“';
     font-style: normal;
@@ -251,14 +259,17 @@ blockquote {
   .menu .menu-links {
     margin-bottom: 20px; }
     .menu .menu-links a {
+      border-bottom-color: #ffffff;
+      -webkit-transition: border-bottom-color 300ms ease;
+      transition: border-bottom-color 300ms ease;
       display: inline-block;
       margin: 0 10px; }
       .menu .menu-links a:hover {
         background-color: inherit;
         color: inherit;
         border-bottom: 2px solid #02c39a; }
-  .menu .menu-active {
-    border-bottom: 2px solid #02c39a; }
+    .menu .menu-links .menu-active {
+      border-bottom: 2px solid #02c39a; }
 
 .restaurant-location {
   text-align: center; }
@@ -274,7 +285,8 @@ blockquote {
     vertical-align: top;
     width: 80%;
     max-width: 800px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); }
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); }
     .restaurant-location .directions h2 {
       display: inline-block;
       border-bottom: solid 2px #02c39a; }
@@ -284,7 +296,8 @@ blockquote {
       .restaurant-location .directions .dir-element .transit-icon {
         margin-left: 1px;
         margin-right: 1px;
-        transform: translateY(8px);
+        -webkit-transform: translateY(8px);
+                transform: translateY(8px);
         width: 30px;
         height: auto; }
 
@@ -330,6 +343,7 @@ blockquote {
       margin-top: 15px;
       color: #fff;
       background-color: #02c39a;
+      -webkit-transition: background-color 300ms ease;
       transition: background-color 300ms ease; }
       .contact .contact-section button[type="submit"]:hover {
         background-color: #028090; }
@@ -346,6 +360,7 @@ blockquote {
     margin-left: 20px;
     margin-right: 20px; }
   .social-links .facebook-link, .social-links .twitter-link, .social-links .instagram-link {
+    -webkit-transition: color 300ms ease;
     transition: color 300ms ease; }
   .social-links .facebook-link:hover {
     background-color: inherit;
@@ -364,5 +379,3 @@ blockquote {
   padding: 20px;
   background-color: #003459;
   color: #fff; }
-
-/*# sourceMappingURL=App.css.map */

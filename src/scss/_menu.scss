@@ -4,6 +4,8 @@
   .menu-links {
     margin-bottom: 20px;
     a {
+      border-bottom-color: #ffffff;
+      transition: border-bottom-color 300ms ease;
       display: inline-block;
       margin: 0 10px;
       &:hover {
@@ -12,8 +14,8 @@
         border-bottom: 2px solid $color3;
       }
     }
-  }
-  .menu-active {
-    border-bottom: 2px solid $color3;
+    .menu-active {
+      border-bottom: 2px solid $color3;
+    }
   }
 }
