@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
+import { connect } from 'react-redux';
 import Home from './home';
 import Menu from './menu';
 import Reservations from './reservations';
 import Order from './order';
 import RestarantLocation from './restaurant-location';
 import Contact from './contact';
+import { fetchAll } from '../actions/fetch-all';
 
-export default class Main extends Component {
+class Main extends Component {
+  componentWillMount() {
+    this.props.dispatch(fetchAll());
+  }
   render() {
     return (
       <main>
@@ -18,8 +23,11 @@ export default class Main extends Component {
           <Route exact path='/order' component={Order}/>
           <Route exact path='/hours-location' component={RestarantLocation}/>
           <Route exact path='/contact' component={Contact}/>
+          <Redirect to="/" />
         </Switch>
       </main>
     );
   }
 }
+
+export default withRouter(connect()(Main));

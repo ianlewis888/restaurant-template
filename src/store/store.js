@@ -1,7 +1,13 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { createLogger } from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
-import reducers from '../reducers/combined-reducers';
+import { fetchAllReducer } from '../reducers/fetch-all';
+import { dataReducer } from '../reducers/data-reducer';
+
+const reducers = combineReducers({
+  data: dataReducer,
+  testData: fetchAllReducer
+});
 
 const loggerMiddleware = createLogger();
 

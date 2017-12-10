@@ -12,7 +12,7 @@ const data = {
       "brunch": {
         "menu": "brunch",
         "name": "fried egg with wild mushrooms and grits",
-        "description": "fried egg, asiago cheese grits, shitakes, oyster mushrooms, and chantrelles, paired with a rich spiced tomato sauce",
+        "description": "fried egg, asiago cheese grits, shitakes, oyster mushrooms, and chantrelles, paired with a rich spiced tomato sauce.",
         "image": brunchImage
       },
       "lunch": {
@@ -28,7 +28,6 @@ const data = {
         "image": dinnerImage
       }
     },
-    "highlight": {},
     "brunch": {},
     "lunch": {},
     "dinner": {}
@@ -49,13 +48,13 @@ const data = {
   },
   "hours": {
     "bar": [
-      {"open": "4PM", "close": "12AM"},
-      {"open": "4PM", "close": "12AM"},
-      {"open": "4PM", "close": "12AM"},
-      {"open": "4PM", "close": "12AM"},
-      {"open": "4PM", "close": "2AM"},
-      {"open": "4PM", "close": "2AM"},
-      {"open": "4PM", "close": "2AM"}
+      {"open": "11AM", "close": "12AM"},
+      {"open": "11AM", "close": "12AM"},
+      {"open": "11AM", "close": "12AM"},
+      {"open": "11AM", "close": "12AM"},
+      {"open": "11AM", "close": "2AM"},
+      {"open": "11AM", "close": "2AM"},
+      {"open": "11AM", "close": "2AM"}
     ],
     "restaurant": [
       {"open": "8AM", "close": "10PM"},
