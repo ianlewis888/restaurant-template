@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { GetMenu, menus } from './menus/menus';
-import getMenuByTOD from '../functions/get-menu-by-tod';
+import { GetMenu, menus } from './get-menu';
+import getMenuByTOD from '../../functions/get-menu-by-tod';
 
 export default class Menu extends Component {
   render() {

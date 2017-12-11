@@ -2,12 +2,13 @@
   padding: 20px;
   text-align: center;
   .menu-links {
-    margin-bottom: 20px;
     a {
       border-bottom-color: #ffffff;
       transition: border-bottom-color 300ms ease;
       display: inline-block;
-      margin: 0 10px;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 40px;
       &:hover {
         background-color: inherit;
         color: inherit;
@@ -16,6 +17,23 @@
     }
     .menu-active {
       border-bottom: 2px solid $color3;
+    }
+  }
+  .menu-section {
+    margin-top: 50px;
+    h2 {
+      margin-bottom: 20px;
+    }
+    .menu-item {
+      margin-bottom: 20px;
+      .menu-item-name, .menu-item-price {
+        font-size: 1.2em;
+      }
+      .menu-item-description {
+        display: inline-block;
+        margin-top: 5px;
+        font-style: italic;
+      }
     }
   }
 }

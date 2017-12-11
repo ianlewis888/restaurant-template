@@ -12,25 +12,161 @@ const data = {
       "brunch": {
         "menu": "brunch",
         "name": "fried egg with wild mushrooms and grits",
-        "description": "fried egg, asiago cheese grits, shitakes, oyster mushrooms, and chantrelles, paired with a rich spiced tomato sauce.",
+        "description": "fried egg, asiago cheese grits, shitakes, oyster mushrooms, and chantrelles, paired with a rich spiced tomato sauce",
         "image": brunchImage
       },
       "lunch": {
         "menu": "lunch",
         "name": "egg, frisée, and caramelized onion sandwich",
-        "description": "slightly runny egg yolk creates a rich, delicious sauce as it mingles with our homemade fig jam.",
+        "description": "slightly runny egg yolk creates a rich, delicious sauce as it mingles with our homemade fig jam",
         "image": lunchImage
       },
       "dinner": {
         "menu": "dinner",
         "name": "hangar steak with rustic balsamic reduction",
-        "description": "paired with a crispy truffle baked potato, wild mushrooms, and smashed avocado.",
+        "description": "paired with a crispy truffle baked potato, wild mushrooms, and smashed avocado",
         "image": dinnerImage
       }
     },
-    "brunch": {},
-    "lunch": {},
-    "dinner": {}
+    "brunch": [
+      {
+        "name": "starters",
+        "items": [
+          {
+            "name": "smoked trout",
+            "description": "hard boiled eggs, cornichons, capers, horseradish cream, toast",
+            "price": 15
+          },
+          {
+            "name": "grilled cheddar toasts",
+            "price": 10
+          },
+          {
+            "name": "squash salad",
+            "description": "roasted & grilled squash, tempura squash blossom, goat cheese, sunflower brittle",
+            "price": 16
+          },
+          {
+            "name": "deviled eggs",
+            "price": 9
+          }
+        ]
+      },
+      {
+        "name": "brunch mains",
+        "items": [
+          {
+            "name": "norwegian eggs",
+            "description": "smoked salmon, ciabatta, hollandaise, served with a side salad",
+            "price": 15
+          },
+          {
+            "name": "full english breakfast",
+            "description": "scrambled eggs, roasted potatoes, thick cut bacon, sausage links, baked beans, mushrooms, tomato",
+            "price": 18
+          },
+          {
+            "name": "fried egg with wild mushrooms and grits",
+            "description": "fried egg, asiago cheese grits, shitakes, oyster mushrooms, and chantrelles, paired with a rich spiced tomato sauce",
+            "price": 16
+          },
+          {
+            "name": "overnight pecan french toast",
+            "description": "10-hour soaked challah french toast topped with toasted pecans, bananas, and fresh whipped cream",
+            "price": 18
+          }
+        ]
+      },
+      {
+        "name": "lunch",
+        "items": [
+          {
+            "name": "rice salad",
+            "description": "fried egg, herbs, cress, cherry toms, cucumber, onion, ginger, and lime",
+            "price": 13
+          },
+          {
+            "name": "fried chicken sandwich",
+            "description": "buttermilk fried chicken with shredded pickle slaw, hot sauce aioli, and a side of okra",
+            "price": 14
+          },
+          {
+            "name": "shrimp and grits",
+            "description": "served with bacon and chipotle oil",
+            "price": 17
+          },
+          {
+            "name": "the cheeseburger",
+            "description": "sautéed white onions, pickles, secret sauce, french fries",
+            "price": 15
+          }
+        ]
+      },
+      {
+        "name": "sides",
+        "items": []
+      },
+      {
+        "name": "cocktails",
+        "items": []
+      }
+    ],
+    "lunch": [
+      {
+        "name": "starters",
+        "items": []
+      },
+      {
+        "name": "salads",
+        "items": []
+      },
+      {
+        "name": "sandwiches",
+        "items": [
+          {
+            "name": "egg, frisée, and caramelized onion sandwich",
+            "description": "slightly runny egg yolk creates a rich, delicious sauce as it mingles with our homemade fig jam",
+            "price": 13
+          }
+        ]
+      },
+      {
+        "name": "sides",
+        "items": []
+      }
+    ],
+    "dinner": [
+      {
+        "name": "starters",
+        "items": []
+      },
+      {
+        "name": "mains",
+        "items": [
+          {
+            "name": "hangar steak with rustic balsamic reduction",
+            "description": "paired with a crispy truffle baked potato, wild mushrooms, and smashed avocado",
+            "price": 22
+          }
+        ]
+      },
+      {
+        "name": "sides",
+        "items": []
+      },
+      {
+        "name": "cocktails",
+        "items": []
+      },
+      {
+        "name": "wine",
+        "items": []
+      },
+      {
+        "name": "dessert",
+        "items": []
+      }
+    ]
   },
   "reservations": {},
   "order": {},

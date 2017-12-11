@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import MenuTemplate from './menu-template';
 
-class Brunch extends Component {
+class Dinner extends Component {
   render() {
     return (
       <div>
         <div className="menu-links">
-          <Link className="menu-active" to='/menu/brunch'><h2>Brunch</h2></Link>
+          <Link to='/menu/brunch'><h2>Brunch</h2></Link>
           <Link to='/menu/lunch'><h2>Lunch</h2></Link>
-          <Link to='/menu/dinner'><h2>Dinner</h2></Link>
+          <Link className="menu-active" to='/menu/dinner'><h2>Dinner</h2></Link>
           <MenuTemplate menu={this.props.menu} />
         </div>
       </div>
@@ -20,10 +20,10 @@ class Brunch extends Component {
 
 function mapStateToProps(state) {
   return {
-    menu: state.data.menus.brunch
+    menu: state.data.menus.dinner
   };
 }
 
 export default withRouter(
-  connect(mapStateToProps)(Brunch)
+  connect(mapStateToProps)(Dinner)
 );

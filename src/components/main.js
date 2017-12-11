@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
 import Home from './home';
-import Menu from './menu';
+import Menu from './menus/menu';
 import Reservations from './reservations';
 import Order from './order';
 import RestarantLocation from './restaurant-location';
