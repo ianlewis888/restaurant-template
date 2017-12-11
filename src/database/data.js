@@ -104,17 +104,75 @@ const data = {
       },
       {
         "name": "sides",
-        "items": []
+        "items": [
+          {
+            "name": "homemade baked beans",
+            "price": 6
+          },
+          {
+            "name": "two eggs any style",
+            "price": 4
+          },
+          {
+            "name": "avocado toast",
+            "price": 7
+          },
+          {
+            "name": "smoked salmon",
+            "price": 7
+          }
+        ]
       },
       {
         "name": "cocktails",
-        "items": []
+        "items": [
+          {
+            "name": "the classics (mimosa, bloody, bellini)",
+            "price": 7
+          },
+          {
+            "name": "moscow mule mimosa",
+            "description": "vodka, ginger beer, champagne, orange juice",
+            "price": 12
+          },
+          {
+            "name": "french 75",
+            "description": "gin, champagne, fresh lemon juice, simple",
+            "price": 13
+          },
+          {
+            "name": "the earl",
+            "description": "iced earl grey tea, gin, honey simple syrup, fresh lemon juice, lavender",
+            "price": 12
+          },
+          {
+            "name": "kentucky cocoa",
+            "description": "house-made hot chocolate, chocolate liqueur, bulliet bourbon",
+            "price": 12
+          }
+        ]
       }
     ],
     "lunch": [
       {
         "name": "starters",
-        "items": []
+        "items": [
+          {
+            "name": "1/2 dozen market oysters",
+            "description": "freshly shucked and served w/ rice wine mignonette",
+            "price": 16
+          },
+          {
+            "name": "burrata",
+            "description": "served with local heirloom tomatoes, fresh basil, house-baked ciabatta, and balsamic drizzle",
+            "price": 14
+          },
+          {
+            "name": "",
+            "description": "",
+            "price": ""
+          }
+        ]
       },
       {
         "name": "salads",
@@ -132,7 +190,24 @@ const data = {
       },
       {
         "name": "sides",
-        "items": []
+        "items": [
+          {
+            "name": "sautéed kale",
+            "price" : 5
+          },
+          {
+            "name": "sautéed mushrooms",
+            "price" : 5
+          },
+          {
+            "name": "fried tomatoes",
+            "price" : 5
+          },
+          {
+            "name": "homemade baked beans",
+            "price" : 6
+          }
+        ]
       }
     ],
     "dinner": [
