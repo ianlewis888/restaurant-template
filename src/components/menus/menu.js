@@ -1,7 +1,19 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { GetMenu, menus } from './get-menu';
 import getMenuByTOD from '../../functions/get-menu-by-tod';
+import Brunch from './brunch';
+import Lunch from './lunch';
+import Dinner from './dinner';
+
+const menus = {
+  "brunch": <Brunch />,
+  "lunch": <Lunch />,
+  "dinner": <Dinner />
+};
+
+function GetMenu(props) {
+  return menus[props.match.params.name];
+}
 
 export default class Menu extends Component {
   render() {
