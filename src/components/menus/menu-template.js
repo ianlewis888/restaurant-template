@@ -1,33 +1,31 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 export default class MenuTemplate extends Component {
   render() {
     var sectionKey = 0;
-    const menu = this.props.menu.map(section => {
-
-      var itemKey = 0;
-      const items = section.items.map(item => {
-
-        itemKey++;
+    const menu = [];
+    for (var key in this.props.menu) {
+      const section = this.props.menu[key]
+      const sectionName = section[0]["section"];
+      const items = section.map(item => {
         if (item.description) {
           return (
-            <div className="menu-item" key={itemKey}>
+            <div className="menu-item" key={item._id}>
               <span className="menu-item-name">
                 {item.name}&#8212;
               </span>
               <span className="menu-item-price">
                 {item.price}
               </span>
-              <br />
+              <br/>
               <span className="menu-item-description">
                 {item.description}
               </span>
             </div>
           );
-        }
-        else {
+        } else {
           return (
-            <div className="menu-item" key={itemKey}>
+            <div className="menu-item" key={item._id}>
               <span className="menu-item-name">
                 {item.name}&#8212;
               </span>
@@ -38,16 +36,14 @@ export default class MenuTemplate extends Component {
           );
         }
       });
-
       sectionKey++;
-      return (
+      menu.push(
         <div className="menu-section" key={sectionKey}>
-          <h2>{section.name}</h2>
+          <h2>{sectionName}</h2>
           {items}
         </div>
       );
-    });
-
+    }
     return (
       <div>{menu}</div>
     );

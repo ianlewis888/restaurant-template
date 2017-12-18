@@ -19,9 +19,10 @@ class Dinner extends Component {
 }
 
 function mapStateToProps(state) {
-  return {
-    menu: state.data.menus.dinner
-  };
+  if (state.mongoData.data !== null) {
+    return { menu: state.mongoData.data.menus.dinnerMenu };
+  }
+  else { return {}; }
 }
 
 export default withRouter(

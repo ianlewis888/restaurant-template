@@ -19,9 +19,10 @@ class Lunch extends Component {
 }
 
 function mapStateToProps(state) {
-  return {
-    menu: state.data.menus.lunch
-  };
+  if (state.mongoData.data !== null) {
+    return { menu: state.mongoData.data.menus.lunchMenu };
+  }
+  else { return {}; }
 }
 
 export default withRouter(

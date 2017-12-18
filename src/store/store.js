@@ -6,7 +6,7 @@ import { dataReducer } from '../reducers/data-reducer';
 
 const reducers = combineReducers({
   data: dataReducer,
-  testData: fetchAllReducer
+  mongoData: fetchAllReducer
 });
 
 const loggerMiddleware = createLogger();
