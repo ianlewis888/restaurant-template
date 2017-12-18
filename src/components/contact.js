@@ -21,7 +21,7 @@ class Contact extends Component {
           </a>
         </div>
         <div className="contact-section">
-          Drop us a line:
+          Leave a comment:
           <br />
           <form>
             <textarea></textarea>

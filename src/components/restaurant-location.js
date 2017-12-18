@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import EmbedMap from './embed-map';
+import Hours from './hours';
 import { TransitIcons } from './transit-icons';
 
 export default class RestaurantLocation extends Component {
   render() {
     return (
       <div className="restaurant-location">
+        <Hours />
         <EmbedMap />
         <p>- Located at 179 Elizabeth Street, New York, NY 10012 -</p>
         <div className="directions">

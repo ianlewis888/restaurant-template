@@ -1,0 +1,27 @@
+.hours {
+  margin-top: 50px;
+  text-align: center;
+  .hours-label {
+    display: inline-block;
+    margin-bottom: 40px;
+    border-bottom: solid $color3 2px;
+  }
+  .select-day > * {
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .day {
+    margin: 0 auto;
+    max-width: 100px;
+    padding: 10px 20px 10px 20px;
+    background-color: $color5;
+    color: $color1;
+    border-radius: 3px;
+  }
+}
+.hours-section {
+  display: inline-block;
+  margin: 20px 20px 0px 20px;
+}

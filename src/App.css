@@ -302,6 +302,30 @@ blockquote {
         width: 30px;
         height: auto; }
 
+.hours {
+  margin-top: 50px;
+  text-align: center; }
+  .hours .hours-label {
+    display: inline-block;
+    margin-bottom: 40px;
+    border-bottom: solid #02c39a 2px; }
+  .hours .select-day > * {
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer; }
+  .hours .day {
+    margin: 0 auto;
+    max-width: 100px;
+    padding: 10px 20px 10px 20px;
+    background-color: #003459;
+    color: #fff;
+    border-radius: 3px; }
+
+.hours-section {
+  display: inline-block;
+  margin: 20px 20px 0px 20px; }
+
 .contact {
   text-align: center;
   font-size: 1.2em;
