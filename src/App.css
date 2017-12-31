@@ -310,21 +310,40 @@ blockquote {
     margin-bottom: 40px;
     border-bottom: solid #02c39a 2px; }
   .hours .select-day > * {
-    display: inline;
+    display: block;
     margin-left: 10px;
     margin-right: 10px;
     cursor: pointer; }
   .hours .day {
-    margin: 0 auto;
-    max-width: 100px;
+    display: inline-block;
+    width: 100px;
     padding: 10px 20px 10px 20px;
     background-color: #003459;
     color: #fff;
-    border-radius: 3px; }
+    border-radius: 3px;
+    user-select: none; }
+  .hours .day-arrow {
+    display: inline-block; }
 
 .hours-section {
   display: inline-block;
-  margin: 20px 20px 0px 20px; }
+  margin: 0px 20px 40px 20px; }
+
+.hours-dots {
+  margin-top: 20px;
+  font-size: 1.2em;
+  cursor: default;
+  user-select: none; }
+  .hours-dots .hours-dot-active {
+    color: #02c39a;
+    transition: color 300ms ease;
+    margin-left: 2px;
+    margin-right: 2px; }
+  .hours-dots .hours-dot-inactive {
+    transition: color 300ms ease;
+    color: #003459;
+    margin-left: 2px;
+    margin-right: 2px; }
 
 .contact {
   text-align: center;

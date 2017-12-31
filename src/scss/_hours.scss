@@ -7,21 +7,43 @@
     border-bottom: solid $color3 2px;
   }
   .select-day > * {
-    display: inline;
+    display: block;
     margin-left: 10px;
     margin-right: 10px;
     cursor: pointer;
   }
   .day {
-    margin: 0 auto;
-    max-width: 100px;
+    display: inline-block;
+    width: 100px;
     padding: 10px 20px 10px 20px;
     background-color: $color5;
     color: $color1;
     border-radius: 3px;
+    user-select: none;
+  }
+  .day-arrow {
+    display: inline-block;
   }
 }
 .hours-section {
   display: inline-block;
-  margin: 20px 20px 0px 20px;
+  margin: 0px 20px 40px 20px;
+}
+.hours-dots {
+  margin-top: 20px;
+  font-size: 1.2em;
+  cursor: default;
+  user-select: none;
+  .hours-dot-active {
+    color: $color3;
+    transition: color 300ms ease;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .hours-dot-inactive {
+    transition: color 300ms ease;
+    color: $color5;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
 }

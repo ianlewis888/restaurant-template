@@ -43,15 +43,22 @@ function dataTransformations(data) {
     if (menuData[name][section] === undefined) {
       menuData[name][section] = [];
     }
-    
+
     menuData[name][section].push(item);
   });
+
+  const hoursData = data.hours.sort((a, b) => {
+    const val = (a.index > b.index) ? 1 : -1;
+    return val;
+  });
+
   return {
     type: DATA_TRANSFORMATIONS,
     payload: {
       menus: menuData,
       blockquotes: data.blockquotes,
-      contactInfo: data.contactInfo
+      contactInfo: data.contactInfo,
+      hours: hoursData
     }
   };
 }
