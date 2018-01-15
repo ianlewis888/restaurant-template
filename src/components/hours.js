@@ -8,9 +8,7 @@ class Hours extends Component {
     this.clickLeft = this.clickLeft.bind(this);
     this.mapHoursSections = this.mapHoursSections.bind(this);
     this.mapHoursDots = this.mapHoursDots.bind(this);
-  }
-  getDefault() {
-    return { dayIndex: new Date().getDay() };
+    if (!this.props.loading) { this.state = { dayIndex: new Date().getDay() }; }
   }
   clickRight() {
     const newIndex = (this.state.dayIndex > 5) ? 0 : this.state.dayIndex + 1;
@@ -41,7 +39,7 @@ class Hours extends Component {
     });
   }
   componentDidMount() {
-    this.setState(this.getDefault());
+    this.setState({ dayIndex: new Date().getDay() });
   }
   render() {
     if (!this.props.loading) {
