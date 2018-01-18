@@ -6,16 +6,16 @@ import * as uberEatsLogo from '../images/partner-logos/uberEats-logo.svg';
 export default class Order extends Component {
   render() {
     return (
-      <div class="order-online">
+      <div className="order-online">
         <h2>Order Online</h2>
-        <a href="https://www.seamless.com" target="_blank">
-          <img src={seamlessLogo} class="partner-logo"></img>
+        <a href="https://www.seamless.com" target="_blank" rel="noopener noreferrer">
+          <img src={seamlessLogo} alt="Seamless logo" className="partner-logo"></img>
         </a>
-        <a href="https://www.eat24.com" target="_blank">
-          <img src={eat24Logo} class="partner-logo"></img>
+        <a href="https://www.eat24.com" target="_blank" rel="noopener noreferrer">
+          <img src={eat24Logo} alt="Eat24 logo" className="partner-logo"></img>
         </a>
-        <a href="https://www.ubereats.com" target="_blank">
-          <img src={uberEatsLogo} class="partner-logo"></img>
+        <a href="https://www.ubereats.com" target="_blank" rel="noopener noreferrer">
+          <img src={uberEatsLogo} alt="Uber Eats logo" className="partner-logo"></img>
         </a>
       </div>
     );
