@@ -1,5 +1,3 @@
-$error_color: #fc3737;
-
 .reservations {
   text-align: center;
   margin-top: 50px;
@@ -16,6 +14,10 @@ form[name="reservation-form"] {
     border-bottom: solid 2px $color5;
     margin: 10px;
     width: 200px;
+    transition: all 300ms ease;
+    &:focus {
+      border-bottom: solid 2px $color3;
+    }
   }
   > div {
     display: inline-block;
@@ -38,6 +40,6 @@ form[name="reservation-form"] {
     left: 50%;
   }
 }
-.input-active {
-  border-bottom: solid 2px $color3;
+.error-text {
+  color: #fc3737;
 }

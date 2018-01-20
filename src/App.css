@@ -317,7 +317,10 @@ form[name="reservation-form"] {
     padding-bottom: 10px;
     border-bottom: solid 2px #003459;
     margin: 10px;
-    width: 200px; }
+    width: 200px;
+    transition: all 300ms ease; }
+    form[name="reservation-form"] input:focus {
+      border-bottom: solid 2px #02c39a; }
   form[name="reservation-form"] > div {
     display: inline-block; }
   form[name="reservation-form"] button {
@@ -334,8 +337,8 @@ form[name="reservation-form"] {
   form[name="reservation-form"] .react-datepicker__triangle {
     left: 50%; }
 
-.input-active {
-  border-bottom: solid 2px #02c39a; }
+.error-text {
+  color: #fc3737; }
 
 .order-online {
   text-align: center;
