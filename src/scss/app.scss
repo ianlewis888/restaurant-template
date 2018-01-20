@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Lato');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-
 $heading-fonts: Roboto, "Open Sans", sans-serif;
 $body-fonts: Lato, "Open Sans", sans-serif;
 
@@ -87,6 +86,7 @@ a {
 @import 'embed-map';
 @import 'menu';
 @import 'restaurant-location';
+@import 'reservations';
 @import 'order-online';
 @import 'hours';
 @import 'contact';

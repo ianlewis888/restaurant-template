@@ -302,6 +302,41 @@ blockquote {
         width: 30px;
         height: auto; }
 
+.reservations {
+  text-align: center;
+  margin-top: 50px; }
+
+form[name="reservation-form"] {
+  margin-top: 40px; }
+  form[name="reservation-form"] input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    text-align: center;
+    outline: none;
+    padding-bottom: 10px;
+    border-bottom: solid 2px #003459;
+    margin: 10px;
+    width: 200px; }
+  form[name="reservation-form"] > div {
+    display: inline-block; }
+  form[name="reservation-form"] button {
+    margin-top: 20px;
+    width: 300px;
+    background-color: #02c39a;
+    color: #fff;
+    transition: all 300ms ease; }
+    form[name="reservation-form"] button:hover {
+      background-color: #028090; }
+  form[name="reservation-form"] .react-datepicker-popper {
+    z-index: 100;
+    transform: translateX(-50px); }
+  form[name="reservation-form"] .react-datepicker__triangle {
+    left: 50%; }
+
+.input-active {
+  border-bottom: solid 2px #02c39a; }
+
 .order-online {
   text-align: center;
   margin-top: 50px; }
