@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import moment from 'moment';
+import Modal from './modal';
 
 export default class Reservations extends Component {
 
   constructor (props) {
-    super(props)
+    super(props);
     this.cleared = {
       name: '',
       nameError: '',
@@ -26,14 +27,17 @@ export default class Reservations extends Component {
       invalidNumberOfPeople: 'please enter a valid number',
       tooManyPeople: 'kindly call for parties of 20 or more',
       selectedDate: 'please select a valid date'
-    }
+    };
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePhoneChange = this.handlePhoneChange.bind(this);
     this.handleNumberOfPeopleChange = this.handleNumberOfPeopleChange.bind(this);
     this.handleDatepickerChange = this.handleDatepickerChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-    this.state = this.cleared;
+    this.state = {
+      ...this.cleared,
+      showModal: false
+    };
   }
 
   handleNameChange(e) {
@@ -125,7 +129,12 @@ export default class Reservations extends Component {
       ...this.state,
       ...empties
     });
-    if (!formError) { this.setState(this.cleared); }
+    if (!formError) {
+      this.setState({
+        ...this.cleared,
+        showModal: true
+      });
+    }
   }
 
   render() {
@@ -175,6 +184,7 @@ export default class Reservations extends Component {
           <br />
           <button type="submit">Submit</button>
         </form>
+        <Modal display={this.state.showModal} />
       </div>
     );
   }
