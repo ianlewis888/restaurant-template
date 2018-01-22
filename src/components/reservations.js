@@ -3,8 +3,9 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import moment from 'moment';
 import Modal from './modal';
+import { connect } from 'react-redux';
 
-export default class Reservations extends Component {
+class Reservations extends Component {
 
   constructor (props) {
     super(props);
@@ -98,7 +99,6 @@ export default class Reservations extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
     var formError = false;
     const errors = [
       this.state.nameError,
@@ -132,7 +132,8 @@ export default class Reservations extends Component {
     if (!formError) {
       this.setState({
         ...this.cleared,
-        showModal: true
+        showModal: true,
+        modalData: formData
       });
     }
   }
@@ -184,8 +185,14 @@ export default class Reservations extends Component {
           <br />
           <button type="submit">Submit</button>
         </form>
-        <Modal display={this.state.showModal} />
+        <Modal display={this.state.showModal} formData={this.state.modalData} />
       </div>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return state;
+}
+
+export default connect(mapStateToProps)(Reservations);
