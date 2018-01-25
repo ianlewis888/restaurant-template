@@ -11,7 +11,7 @@ class Modal extends Component {
     this.props.dispatch(dismissModal());
   }
   render() {
-    const className = (this.props.display) ? "modal" : "modal hidden";
+    const className = (this.props.showModal) ? "modal" : "modal hidden";
     var formData = { name: "", email: "", phone: "", numberOfPeople: "", date: ""};
     if (this.props.formData) {
       formData.name = this.props.formData.name;

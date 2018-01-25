@@ -10,18 +10,14 @@ class Reservations extends Component {
 
   constructor (props) {
     super(props);
-    this.default = {
-      name: '',
-      nameError: '',
-      email: '',
-      emailError: '',
-      phone: '',
-      phoneError: '',
-      numberOfPeople: '',
-      numberOfPeopleError: '',
-      selectedDate: undefined,
-      selectedDateError: ''
-    };
+
+    this.defaultState = {
+      name: { value: undefined, error: '' },
+      email: { value: undefined, error: '' },
+      phone: { value: undefined, error: '' },
+      numberOfPeople: { value: undefined, error: '' },
+      selectedDate: { value: undefined, error: '' }
+    }
     this.errorText = {
       name: 'please enter a name',
       email: 'please enter valid email',
@@ -30,14 +26,16 @@ class Reservations extends Component {
       tooManyPeople: 'kindly call for parties of 20 or more',
       selectedDate: 'please select a valid date'
     };
+
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePhoneChange = this.handlePhoneChange.bind(this);
     this.handleNumberOfPeopleChange = this.handleNumberOfPeopleChange.bind(this);
     this.handleDatepickerChange = this.handleDatepickerChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+
     this.state = {
-      ...this.default
+      ...this.defaultState
     };
   }
 
@@ -46,8 +44,7 @@ class Reservations extends Component {
     const err = (!name) ? this.errorText.name : '';
     this.setState({
       ...this.state,
-      name: name,
-      nameError: err
+      name: { value: name, error: err}
     });
   }
 
@@ -57,8 +54,7 @@ class Reservations extends Component {
     const err = (!regexp.test(email)) ? this.errorText.email : '';
     this.setState({
       ...this.state,
-      email: email,
-      emailError: err
+      email: { value: email, error: err }
     });
   }
 
@@ -68,8 +64,7 @@ class Reservations extends Component {
     const err = (!regexp.test(phone)) ? this.errorText.phone : '';
     this.setState({
       ...this.state,
-      phone: phone,
-      phoneError: err
+      phone: { value: phone, error: err }
     });
   }
 
@@ -83,8 +78,7 @@ class Reservations extends Component {
     if (Number(numberOfPeople) > 19) { err = this.errorText.tooManyPeople; }
     this.setState({
       ...this.state,
-      numberOfPeople: numberOfPeople,
-      numberOfPeopleError: err
+      numberOfPeople: { value: numberOfPeople, error: err }
     });
   }
 
@@ -92,52 +86,40 @@ class Reservations extends Component {
     const err = (!date) ? this.errorText.selectedDate : '';
     this.setState({
       ...this.state,
-      selectedDate: date,
-      selectedDateError: err
+      selectedDate: { value: date, error: err }
     });
   }
 
   onSubmit(e) {
     e.preventDefault();
     var formError = false;
-    const errors = [
-      this.state.nameError,
-      this.state.emailError,
-      this.state.phoneError,
-      this.state.numberOfPeopleError,
-      this.state.selectedDateError
-    ];
-    errors.forEach(err => {
-      if (err) { formError = true; }
-    });
-    var empties = {};
-    const formData = {
-      name: this.state.name,
-      email: this.state.email,
-      phone: this.state.phone,
-      numberOfPeople: this.state.numberOfPeople,
-      selectedDate: this.state.selectedDate
-    };
-    for (const d in formData) {
-      if (!formData[d]) {
+    var emptyFields = {};
+    var formData = {};
+    for (const d in this.state) {
+      formData[d] = this.state[d].value;
+      if (this.state[d].error) { formError = true; }
+      if (!this.state[d].value) {
         formError = true;
-        const err = d + "Error";
-        empties[err] = (d === "numberOfPeople") ?
-          this.errorText.invalidNumberOfPeople : this.errorText[d];
+        emptyFields[d] = (d === "numberOfPeople") ?
+          { value: undefined, error: this.errorText.invalidNumberOfPeople} :
+          { value: undefined, error: this.errorText[d] };
       }
     }
-    this.setState({
-      ...this.state,
-      ...empties
-    });
     if (!formError) {
-      this.setState({
-        ...this.default
-      });
+      this.setState({ ...this.defaultState });
       this.props.dispatch(showModal(formData));
+      this.nameInput.value = '';
+      this.emailInput.value = '';
+      this.phoneInput.value = '';
+      this.numberOfPeopleInput.value = '';
+    }
+    else {
+      this.setState({
+        ...this.state,
+        ...emptyFields
+      });
     }
   }
-
   render() {
     return (
       <div className="reservations">
@@ -147,37 +129,37 @@ class Reservations extends Component {
           <input
             type="text"
             placeholder="your name"
-            value={this.state.name}
-            onChange={this.handleNameChange}>
+            onChange={this.handleNameChange}
+            ref={nameInput => { this.nameInput = nameInput; }}>
           </input>
-          <span className="error-text">{this.state.nameError}</span>
+          <span className="error-text">{this.state.name.error}</span>
           </div>
           <div className="form-group">
           <input
             type="text"
             placeholder="your email address"
-            value={this.state.email}
-            onChange={this.handleEmailChange}>
+            onChange={this.handleEmailChange}
+            ref={emailInput => { this.emailInput = emailInput; }}>
           </input>
-          <span className="error-text">{this.state.emailError}</span>
+          <span className="error-text">{this.state.email.error}</span>
           </div>
           <div className="form-group">
           <input
             type="text"
             placeholder="your phone number"
-            value={this.state.phone}
-            onChange={this.handlePhoneChange}>
+            onChange={this.handlePhoneChange}
+            ref={phoneInput => { this.phoneInput = phoneInput; }}>
           </input>
-          <span className="error-text">{this.state.phoneError}</span>
+          <span className="error-text">{this.state.phone.error}</span>
           </div>
           <div className="form-group">
           <input
             type="text"
             placeholder="number of people"
-            value={this.state.numberOfPeople}
-            onChange={this.handleNumberOfPeopleChange}>
+            onChange={this.handleNumberOfPeopleChange}
+            ref={numberOfPeopleInput => { this.numberOfPeopleInput = numberOfPeopleInput; }}>
           </input>
-          <span className="error-text">{this.state.numberOfPeopleError}</span>
+          <span className="error-text">{this.state.numberOfPeople.error}</span>
           </div>
           <div className="form-group">
           <DatePicker
@@ -187,15 +169,15 @@ class Reservations extends Component {
               timeIntervals={15}
               dateFormat="LLL"
               placeholderText="select a date"
-              selected={this.state.selectedDate}
+              selected={this.state.selectedDate.value}
               onChange={this.handleDatepickerChange}
           />
-          <span className="error-text">{this.state.selectedDateError}</span>
+          <span className="error-text">{this.state.selectedDate.error}</span>
           </div>
           <br />
           <button type="submit">Submit</button>
         </form>
-        <Modal display={this.props.showModal} />
+        <Modal />
       </div>
     );
   }
