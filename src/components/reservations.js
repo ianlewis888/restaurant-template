@@ -4,12 +4,13 @@ import 'react-datepicker/dist/react-datepicker.css';
 import moment from 'moment';
 import Modal from './modal';
 import { connect } from 'react-redux';
+import { showModal } from '../actions/reservation-form';
 
 class Reservations extends Component {
 
   constructor (props) {
     super(props);
-    this.cleared = {
+    this.default = {
       name: '',
       nameError: '',
       email: '',
@@ -36,8 +37,7 @@ class Reservations extends Component {
     this.handleDatepickerChange = this.handleDatepickerChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.state = {
-      ...this.cleared,
-      showModal: false
+      ...this.default
     };
   }
 
@@ -122,7 +122,8 @@ class Reservations extends Component {
       if (!formData[d]) {
         formError = true;
         const err = d + "Error";
-        empties[err] = (d === "numberOfPeople") ? this.errorText.invalidNumberOfPeople : this.errorText[d];
+        empties[err] = (d === "numberOfPeople") ?
+          this.errorText.invalidNumberOfPeople : this.errorText[d];
       }
     }
     this.setState({
@@ -131,10 +132,9 @@ class Reservations extends Component {
     });
     if (!formError) {
       this.setState({
-        ...this.cleared,
-        showModal: true,
-        modalData: formData
+        ...this.default
       });
+      this.props.dispatch(showModal(formData));
     }
   }
 
@@ -143,34 +143,43 @@ class Reservations extends Component {
       <div className="reservations">
         <h2>Make a Reservation</h2>
         <form name="reservation-form" onSubmit={this.onSubmit}>
+          <div className="form-group">
           <input
             type="text"
             placeholder="your name"
             value={this.state.name}
             onChange={this.handleNameChange}>
           </input>
-          <label className="error-text">{this.state.nameError}</label>
+          <span className="error-text">{this.state.nameError}</span>
+          </div>
+          <div className="form-group">
           <input
             type="text"
             placeholder="your email address"
             value={this.state.email}
             onChange={this.handleEmailChange}>
           </input>
-          <label className="error-text">{this.state.emailError}</label>
+          <span className="error-text">{this.state.emailError}</span>
+          </div>
+          <div className="form-group">
           <input
             type="text"
             placeholder="your phone number"
             value={this.state.phone}
             onChange={this.handlePhoneChange}>
           </input>
-          <label className="error-text">{this.state.phoneError}</label>
+          <span className="error-text">{this.state.phoneError}</span>
+          </div>
+          <div className="form-group">
           <input
             type="text"
             placeholder="number of people"
             value={this.state.numberOfPeople}
             onChange={this.handleNumberOfPeopleChange}>
           </input>
-          <label className="error-text">{this.state.numberOfPeopleError}</label>
+          <span className="error-text">{this.state.numberOfPeopleError}</span>
+          </div>
+          <div className="form-group">
           <DatePicker
               showTimeSelect
               popperPlacement="bottom"
@@ -181,18 +190,19 @@ class Reservations extends Component {
               selected={this.state.selectedDate}
               onChange={this.handleDatepickerChange}
           />
-          <label className="error-text">{this.state.selectedDateError}</label>
+          <span className="error-text">{this.state.selectedDateError}</span>
+          </div>
           <br />
           <button type="submit">Submit</button>
         </form>
-        <Modal display={this.state.showModal} formData={this.state.modalData} />
+        <Modal display={this.props.showModal} />
       </div>
     );
   }
 }
 
 function mapStateToProps(state) {
-  return state;
+  return state.reservationForm;
 }
 
 export default connect(mapStateToProps)(Reservations);

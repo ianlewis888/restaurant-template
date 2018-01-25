@@ -19,11 +19,25 @@ form[name="reservation-form"] {
       border-bottom: solid 2px $color3;
     }
   }
-  > div {
+  .form-group {
     display: inline-block;
+    .error-text {
+      color: #fc3737;
+      display: block;
+      font-size: .8em;
+      height: 20px;
+      &:before {
+        opacity: 0;
+        content: '-';
+      }
+      &:after {
+        opacity: 0;
+        content: '-';
+      }
+    }
   }
   button {
-    margin-top: 20px;
+    margin-top: 30px;
     width: 300px;
     background-color: $color3;
     color: $color1;
@@ -39,7 +53,4 @@ form[name="reservation-form"] {
   .react-datepicker__triangle {
     left: 50%;
   }
-}
-.error-text {
-  color: #fc3737;
 }

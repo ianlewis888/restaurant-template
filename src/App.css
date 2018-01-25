@@ -321,10 +321,21 @@ form[name="reservation-form"] {
     transition: all 300ms ease; }
     form[name="reservation-form"] input:focus {
       border-bottom: solid 2px #02c39a; }
-  form[name="reservation-form"] > div {
+  form[name="reservation-form"] .form-group {
     display: inline-block; }
+    form[name="reservation-form"] .form-group .error-text {
+      color: #fc3737;
+      display: block;
+      font-size: .8em;
+      height: 20px; }
+      form[name="reservation-form"] .form-group .error-text:before {
+        opacity: 0;
+        content: '-'; }
+      form[name="reservation-form"] .form-group .error-text:after {
+        opacity: 0;
+        content: '-'; }
   form[name="reservation-form"] button {
-    margin-top: 20px;
+    margin-top: 30px;
     width: 300px;
     background-color: #02c39a;
     color: #fff;
@@ -336,9 +347,6 @@ form[name="reservation-form"] {
     transform: translateX(-50px); }
   form[name="reservation-form"] .react-datepicker__triangle {
     left: 50%; }
-
-.error-text {
-  color: #fc3737; }
 
 .hidden {
   display: none; }
@@ -360,6 +368,13 @@ form[name="reservation-form"] {
     padding: 20px;
     border-radius: 5px;
     margin: 15% auto; }
+    .modal .modal-content h2 {
+      margin-bottom: 20px; }
+    .modal .modal-content * {
+      margin: 10px; }
+    .modal .modal-content button {
+      background-color: #02c39a;
+      color: #fff; }
 
 .order-online {
   text-align: center;
